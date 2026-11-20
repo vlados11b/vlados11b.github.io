@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - Personal Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Kontaktai - Mano CV</title>
+  <meta name="description" content="Vladislav Romov kontaktinė forma ir įvertinimai">
+  <meta name="author" content="Vladislav Romov">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -29,14 +29,6 @@
 
   <!-- Custom CSS File -->
   <link href="assets/css/custom.css" rel="stylesheet">
-
-  <!-- =======================================================
-- Template Name: Personal
-- Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-- Updated: Mar 05 2025 with Bootstrap v5.3.3
-- Author: BootstrapMade.com
-- License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="contact-page">
@@ -45,9 +37,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Personal</h1>
+        <h1 class="sitename">Informacija</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -94,14 +84,14 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4">
+        <div class="row gy-4 mb-5">
 
           <div class="col-md-6">
             <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
               <i class="icon bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h3>Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <h3>Adresas</h3>
+                <p>Vilnius, Lietuva</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -110,8 +100,8 @@
             <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
               <i class="icon bi bi-telephone flex-shrink-0"></i>
               <div>
-                <h3>Call Me</h3>
-                <p>+1 5589 55488 55</p>
+                <h3>Telefonas</h3>
+                <p>+370 677 77777</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -120,8 +110,8 @@
             <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
               <i class="icon bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <h3>El. paštas</h3>
+                <p>vladospro@gmail.com</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -130,7 +120,7 @@
             <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
               <i class="icon bi bi-share flex-shrink-0"></i>
               <div>
-                <h3>Social Profiles</h3>
+                <h3>Socialiniai tinklai</h3>
                 <div class="social-links">
                   <a href="#"><i class="bi bi-twitter-x"></i></a>
                   <a href="#"><i class="bi bi-facebook"></i></a>
@@ -144,35 +134,88 @@
 
         </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-          <div class="row gy-4">
+        <!-- Kontaktų forma (11 lab.) -->
+        <div class="lab11-form-wrapper" data-aos="fade-up" data-aos-delay="600">
+          <form id="lab11-contact-form" class="lab11-contact-form" novalidate>
+            <div class="row gy-4">
 
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              <!-- a. Vardas -->
+              <div class="col-md-6">
+                <label for="vardas" class="form-label lab11-label">Vardas <span class="required-star">*</span></label>
+                <input type="text" id="vardas" name="vardas" class="form-control lab11-input" placeholder="Įveskite vardą" required>
+                <div class="lab11-error" id="error-vardas" aria-live="polite"></div>
+              </div>
+
+              <!-- b. Pavardė -->
+              <div class="col-md-6">
+                <label for="pavarde" class="form-label lab11-label">Pavardė <span class="required-star">*</span></label>
+                <input type="text" id="pavarde" name="pavarde" class="form-control lab11-input" placeholder="Įveskite pavardę" required>
+                <div class="lab11-error" id="error-pavarde" aria-live="polite"></div>
+              </div>
+
+              <!-- c. El. paštas -->
+              <div class="col-md-6">
+                <label for="elpastas" class="form-label lab11-label">El. paštas <span class="required-star">*</span></label>
+                <input type="email" id="elpastas" name="elpastas" class="form-control lab11-input" placeholder="vardas@pastas.lt" required>
+                <div class="lab11-error" id="error-elpastas" aria-live="polite"></div>
+              </div>
+
+              <!-- d. Telefono numeris (+370 6xx xxxxx) -->
+              <div class="col-md-6">
+                <label for="telefonas" class="form-label lab11-label">Telefono numeris <span class="required-star">*</span></label>
+                <input type="tel" id="telefonas" name="telefonas" class="form-control lab11-input" placeholder="+370 6xx xxxxx" inputmode="numeric" maxlength="14" required>
+                <div class="lab11-error" id="error-telefonas" aria-live="polite"></div>
+              </div>
+
+              <!-- e. Adresas -->
+              <div class="col-12">
+                <label for="adresas" class="form-label lab11-label">Adresas <span class="required-star">*</span></label>
+                <input type="text" id="adresas" name="adresas" class="form-control lab11-input" placeholder="Įveskite adresą (pvz., Gedimino pr. 1, Vilnius)" required>
+                <div class="lab11-error" id="error-adresas" aria-live="polite"></div>
+              </div>
+
+              <!-- f. 3 vertinimo klausimai (skalė 1-10) -->
+              <div class="col-12">
+                <div class="lab11-ratings-box">
+                  <h4 class="lab11-ratings-title">Įvertinimo klausimai (skalė 1–10)</h4>
+                  <div class="row gy-3">
+
+                    <div class="col-md-4">
+                      <label for="vertinimas1" class="form-label lab11-label">1. CV svetainės dizainas (1–10) <span class="required-star">*</span></label>
+                      <input type="number" id="vertinimas1" name="vertinimas1" class="form-control lab11-input" min="1" max="10" step="1" placeholder="1–10" required>
+                      <div class="lab11-error" id="error-vertinimas1" aria-live="polite"></div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="vertinimas2" class="form-label lab11-label">2. Informacijos aiškumas (1–10) <span class="required-star">*</span></label>
+                      <input type="number" id="vertinimas2" name="vertinimas2" class="form-control lab11-input" min="1" max="10" step="1" placeholder="1–10" required>
+                      <div class="lab11-error" id="error-vertinimas2" aria-live="polite"></div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="vertinimas3" class="form-label lab11-label">3. Įgūdžių ir patirties pristatymas (1–10) <span class="required-star">*</span></label>
+                      <input type="number" id="vertinimas3" name="vertinimas3" class="form-control lab11-input" min="1" max="10" step="1" placeholder="1–10" required>
+                      <div class="lab11-error" id="error-vertinimas3" aria-live="polite"></div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- g. Mygtukas „Siųsti“ ir Papildomos užduoties 3.a mygtukas „Išvalyti“ -->
+              <div class="col-12">
+                <div class="lab11-actions">
+                  <button type="submit" id="lab11-submit-btn" class="btn lab11-btn-submit" disabled>Siųsti</button>
+                  <button type="button" id="lab11-clear-btn" class="btn lab11-btn-clear">Išvalyti</button>
+                </div>
+              </div>
+
             </div>
+          </form>
 
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-            </div>
-
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-            </div>
-
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
-            </div>
-
-          </div>
-        </form><!-- End Contact Form -->
+          <!-- Rezultatų ir 3 klausimų vidurkio atvaizdavimo sritis formos apačioje -->
+          <div id="lab11-result" class="lab11-result" aria-live="polite"></div>
+        </div>
 
       </div>
 
@@ -182,8 +225,8 @@
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Personal</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <h3 class="sitename">Informacija</h3>
+      <p>Vladislav Romov - Automatika ir IT sprendimai.</p>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
         <a href=""><i class="bi bi-facebook"></i></a>
@@ -196,11 +239,7 @@
           <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
     </div>
@@ -226,6 +265,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS File (11 lab.) -->
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

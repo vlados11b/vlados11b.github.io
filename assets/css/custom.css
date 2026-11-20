@@ -180,10 +180,6 @@ section#skills .progress-bar,
   box-shadow: 0 0 14px rgba(0, 212, 255, 0.65) !important;
 }
 
-/* ==========================================================================
-   Skill Kanban, XP progreso juosta ir įgūdžių statistika
-   ========================================================================== */
-
 .kanban-stats-bar {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -573,6 +569,152 @@ section#skills .progress-bar,
     top: auto;
     bottom: 10%;
     right: 5%;
+  }
+}
+
+/* ==========================================================================
+   11 laboratorinis darbas: Kontaktų forma, validacija, mygtukai ir rezultatai
+   ========================================================================== */
+
+.contact-page .lab11-form-wrapper {
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+}
+
+.contact-page .lab11-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 6px;
+}
+
+.contact-page .required-star {
+  color: #f87171;
+}
+
+.contact-page .lab11-input {
+  background-color: rgba(2, 6, 23, 0.75) !important;
+  color: #f1f5f9 !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 11px 14px !important;
+  font-family: 'Raleway', sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-page .lab11-input::placeholder {
+  color: #64748b;
+}
+
+.contact-page .lab11-input:focus {
+  border-color: #00d4ff !important;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.18) !important;
+  outline: none;
+}
+
+.contact-page .lab11-input.is-invalid-field {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+}
+
+.contact-page .lab11-input.is-valid-field {
+  border-color: #10b981 !important;
+}
+
+.contact-page .lab11-error {
+  min-height: 20px;
+  margin-top: 5px;
+  font-size: 0.84rem;
+  color: #f87171;
+}
+
+.contact-page .lab11-ratings-box {
+  background: rgba(2, 6, 23, 0.55);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.contact-page .lab11-ratings-title {
+  font-size: 1.05rem !important;
+  text-transform: none !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 14px;
+  display: block !important;
+}
+
+.contact-page .lab11-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.contact-page #lab11-submit-btn:disabled {
+  opacity: 0.45 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.contact-page #lab11-clear-btn {
+  background-color: transparent !important;
+  color: #7dd3fc !important;
+  border: 2px solid rgba(125, 211, 252, 0.55) !important;
+}
+
+.contact-page #lab11-clear-btn:hover {
+  background-color: rgba(125, 211, 252, 0.12) !important;
+  color: #e0f2fe !important;
+  border-color: #00d4ff !important;
+}
+
+.contact-page .lab11-result {
+  margin-top: 24px;
+}
+
+.contact-page .lab11-result-card {
+  background: rgba(2, 6, 23, 0.82);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  border-left: 4px solid #00d4ff;
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.contact-page .lab11-result-details {
+  font-style: italic;
+  color: #e2e8f0;
+  line-height: 1.75;
+}
+
+.contact-page .lab11-average-line {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(56, 189, 248, 0.25);
+  font-style: italic;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.contact-page .lab11-submit-warning {
+  color: #f87171 !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 575.98px) {
+  .contact-page .lab11-form-wrapper {
+    padding: 18px;
+  }
+
+  .contact-page .lab11-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
